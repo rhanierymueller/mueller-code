@@ -7,15 +7,29 @@ html {
 }
 
 @layer utilities {
-  /* Aurora / blobs */
   @keyframes blob {
-    0%,100% { transform: translate(0,0) scale(1); }
-    20%     { transform: translate(35%, -20%) scale(1.2); }   /* +15% */
-    50%     { transform: translate(-25%, 40%) scale(0.8); }   /* +15% */
-    80%     { transform: translate(-40%, -25%) scale(1.25); } /* +15% */
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    20% {
+      transform: translate(35%, -20%) scale(1.2);
+    }
+    50% {
+      transform: translate(-25%, 40%) scale(0.8);
+    }
+    80% {
+      transform: translate(-40%, -25%) scale(1.25);
+    }
   }
 
-  .animate-blob          { animation: blob 32s ease-in-out infinite; }
-  .animation-delay-4000  { animation-delay: 4s; }
-  .animation-delay-8000  { animation-delay: 8s; }
+  .animate-blob {
+    animation: blob 32s ease-in-out infinite;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  .animation-delay-8000 {
+    animation-delay: 8s;
+  }
 }
