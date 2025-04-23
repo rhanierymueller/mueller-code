@@ -8,6 +8,7 @@ import AuroraBackground from '../components/AuroraBackground';
 import { Button } from '../components/Button';
 import toast from 'react-hot-toast';
 import profileImg from '../assets/image/profile.png';
+import Header from '../components/Header';
 
 export default function MuellerCodeHome() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -86,58 +87,7 @@ export default function MuellerCodeHome() {
   return (
     <main className="relative isolate min-h-screen bg-black text-white font-sans overflow-x-hidden">
       <AuroraBackground />
-      <header className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-lg border-b border-gray-800 shadow-sm">
-        <nav className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-          <a href="#inicio" className="flex items-center space-x-2">
-            <img
-              src="/logo.png"
-              alt="Logo Mueller Code"
-              className="w-8 h-8 object-contain" // ajuste tamanho se quiser
-            />
-            <span className="text-xl font-bold tracking-wide">Mueller&nbsp;Code</span>
-          </a>
-
-          {/* LINKS */}
-          <ul className="flex space-x-6 text-sm font-medium">
-            <li>
-              <a href="#inicio" className="hover:text-blue-400 transition">
-                Início
-              </a>
-            </li>
-            <li>
-              <a href="#sobre" className="hover:text-blue-400 transition">
-                Sobre
-              </a>
-            </li>
-            <li>
-              <a href="#servicos" className="hover:text-blue-400 transition">
-                Serviços
-              </a>
-            </li>
-            <li>
-              <a href="#portfolio" className="hover:text-blue-400 transition">
-                Portfólio
-              </a>
-            </li>
-            <li>
-              <a href="#contato" className="hover:text-blue-400 transition">
-                Contato
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://calendar.google.com/calendar/u/3/r?pli=1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-400 transition"
-              >
-                Agendar
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
+      <Header />
       <section
         id="inicio"
         className="h-screen flex flex-col items-center justify-center text-center p-6 space-y-6"
