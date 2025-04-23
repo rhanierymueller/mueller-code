@@ -124,6 +124,16 @@ export default function MuellerCodeHome() {
                 Contato
               </a>
             </li>
+            <li>
+              <a
+                href="https://calendar.google.com/calendar/u/3/r?pli=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-400 transition"
+              >
+                Agendar
+              </a>
+            </li>
           </ul>
         </nav>
       </header>
@@ -253,7 +263,7 @@ export default function MuellerCodeHome() {
         </div>
       </section>
 
-      <section id="contato" className="py-24 px-6 bg-black text-center">
+      <section id="contato" className="py-24 px-6 text-center">
         <h2 className="text-4xl font-bold mb-4 text-blue-500">Entre em Contato</h2>
         <p className="text-gray-300 mb-8">Vamos conversar sobre seu projeto?</p>
 
