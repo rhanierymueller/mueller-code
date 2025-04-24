@@ -4,6 +4,7 @@ import { Code, Smartphone, Globe } from 'lucide-react';
 import { Card, CardContent } from '../components/Card';
 import { useRef, useState } from 'react';
 import serenaImg from '../assets/image/serena.png';
+import trocaFacil from '../assets/image/trocafacil.png';
 import AuroraBackground from '../components/AuroraBackground';
 import { Button } from '../components/Button';
 import toast from 'react-hot-toast';
@@ -81,6 +82,15 @@ export default function MuellerCodeHome() {
       image: serenaImg,
       live: null,
       site: 'https://serena-ai.vercel.app/',
+      tech: ['React', 'Node.js', 'TailwindCSS', 'TypeScript', 'Prisma', 'PostgreSQL'],
+    },
+    {
+      title: 'Troca Fácil',
+      description: 'Plataforma de troca de produtos e serviços.',
+      image: trocaFacil,
+      live: null,
+      site: null,
+      tech: ['React', 'Node.js', 'TailwindCSS', 'PostgreSQL'],
     },
   ];
 
@@ -207,6 +217,18 @@ export default function MuellerCodeHome() {
               <div className="p-5 text-left">
                 <h3 className="text-lg font-semibold">{p.title}</h3>
                 <p className="text-gray-400 text-sm mt-1">{p.description}</p>
+                {p.tech && (
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {p.tech.map((tech, index) => (
+                      <span
+                        key={index}
+                        className="bg-cyan-800/20 text-cyan-400 text-xs px-3 py-1 rounded-full border border-cyan-500"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
