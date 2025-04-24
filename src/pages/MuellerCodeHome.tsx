@@ -131,9 +131,14 @@ export default function MuellerCodeHome() {
           </a>
         </motion.div>
       </section>
-
       <section id="sobre" className="py-24 px-6 bg-black">
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10"
+        >
           <img
             src={profileImg}
             alt="Rhaniery Mueller"
@@ -144,13 +149,11 @@ export default function MuellerCodeHome() {
             <p className="text-lg text-gray-300">
               Sou Rhaniery Mueller, fundador da Mueller Code. Construí essa empresa para trazer
               soluções digitais com impacto real. Nossa missão é transformar ideias em experiências
-              visuais e funcionais. Com foco em performance, design e inovação, criamos websites,
-              sistemas e apps que realmente fazem a diferença.
+              visuais e funcionais.
             </p>
           </div>
-        </div>
+        </motion.div>
       </section>
-
       <section
         id="servicos"
         className="py-20 px-6 grid gap-12 md:grid-cols-3 bg-[#0e0e0e]/80 backdrop-blur-lg"
@@ -158,8 +161,11 @@ export default function MuellerCodeHome() {
         {services.map((item, i) => (
           <motion.div
             key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: i * 0.2 }}
+            viewport={{ once: true }}
             whileHover={{ scale: 1.05, rotate: 1 }}
-            transition={{ type: 'spring', stiffness: 200, damping: 10 }}
           >
             <Card className="bg-[#121212]/60 border border-gray-700 backdrop-blur-md hover:shadow-lg hover:shadow-blue-500/20 transition-all">
               <CardContent className="p-6 space-y-4 text-center">
@@ -171,16 +177,17 @@ export default function MuellerCodeHome() {
           </motion.div>
         ))}
       </section>
-
       <section id="portfolio" className="py-24 px-6 bg-black text-center">
         <h2 className="text-4xl font-bold mb-12 text-blue-500">Projetos Recentes</h2>
-
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {projects.map((p, i) => (
             <motion.div
               key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: i * 0.2 }}
+              viewport={{ once: true }}
               whileHover={{ y: -6 }}
-              transition={{ type: 'spring', stiffness: 260, damping: 22 }}
               className="rounded-3xl overflow-hidden shadow-lg bg-[#0e0e0e]/80 backdrop-blur-md"
             >
               <div className="relative group">
@@ -213,7 +220,6 @@ export default function MuellerCodeHome() {
                   </div>
                 </div>
               </div>
-
               <div className="p-5 text-left">
                 <h3 className="text-lg font-semibold">{p.title}</h3>
                 <p className="text-gray-400 text-sm mt-1">{p.description}</p>

@@ -10,7 +10,7 @@ export default function Header() {
     { href: '#servicos', label: 'Serviços' },
     { href: '#portfolio', label: 'Portfólio' },
     { href: '#contato', label: 'Contato' },
-    { href: import.meta.env.VITE_CALENDAR_URL, label: 'Agendar', external: true },
+    { href: import.meta.env.VITE_CALENDAR_URL, label: 'Agende uma reunião', external: true },
   ];
 
   return (
