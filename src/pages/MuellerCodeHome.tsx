@@ -3,7 +3,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { Code, Smartphone, Globe } from 'lucide-react';
 import { Card, CardContent } from '../components/Card';
 import { useRef, useState } from 'react';
-import serenaImg from '../assets/image/serena.png';
+import avyliaImg from '../assets/image/avylia.png';
 import trocaFacil from '../assets/image/trocafacil.png';
 import AuroraBackground from '../components/AuroraBackground';
 import { Button } from '../components/Button';
@@ -77,11 +77,11 @@ export default function MuellerCodeHome() {
 
   const projects = [
     {
-      title: 'Serena AI',
-      description: 'Chatbot terapêutico com voz e LLM.',
-      image: serenaImg,
+      title: 'Avylia AI',
+      description: 'Chatbot terapêutico com voz e LLM',
+      image: avyliaImg,
       live: null,
-      site: 'https://serena-ai.vercel.app/',
+      site: 'https://www.avylia.com/',
       tech: ['React', 'Node.js', 'TailwindCSS', 'TypeScript', 'Prisma', 'PostgreSQL'],
     },
     {
