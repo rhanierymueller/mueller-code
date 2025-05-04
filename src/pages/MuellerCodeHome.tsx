@@ -70,8 +70,8 @@ export default function MuellerCodeHome() {
     },
     {
       icon: <Code className="mx-auto w-10 h-10 text-white" />,
-      title: 'Soluções Personalizadas',
-      text: 'Sistemas sob medida para otimizar o seu negócio.',
+      title: 'SaaS',
+      text: 'Desenvolvimento de Software as a Service escalável e rentável.',
     },
   ];
 

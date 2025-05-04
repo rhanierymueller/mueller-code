@@ -17,7 +17,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-lg border-b border-gray-800 shadow-sm">
       <nav className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <a href="#inicio" className="flex items-center space-x-2">
-          <img src="/logo.png" alt="Logo Mueller Code" className="w-8 h-8 object-contain" />
+          <img src="/logo.png" alt="Logo Mueller Code" className="w-12 h-12 object-contain" />
           <span className="text-xl font-bold tracking-wide text-white">Mueller Code</span>
         </a>
 
