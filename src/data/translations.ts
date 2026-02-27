@@ -1,0 +1,148 @@
+export const t = {
+  pt: {
+    nav: {
+      home: 'Início',
+      about: 'Sobre',
+      stack: 'Stack',
+      projects: 'Projetos',
+      contact: 'Contato',
+      meeting: 'Agendar Reunião',
+    },
+    hero: {
+      greeting: 'Olá, eu sou',
+      name: 'Rhaniery Mueller',
+      roles: [
+        'Full Stack Developer',
+        2000,
+        'React Specialist',
+        2000,
+        'Builder of Ideas',
+        2000,
+        'Mobile Developer',
+        2000,
+      ],
+      cta1: 'Ver Projetos',
+      cta2: 'Fale Comigo',
+      scroll: 'Role para explorar',
+    },
+    about: {
+      title: 'Sobre Mim',
+      description:
+        'Sou Rhaniery Mueller, desenvolvedor full stack apaixonado por criar experiências digitais que marcam. Transformo ideias em soluções funcionais e visualmente únicas, do backend robusto ao frontend dinâmico.',
+      description2:
+        'Com foco em qualidade e performance, trabalho com tecnologias modernas para entregar produtos que realmente fazem diferença.',
+      stats: [
+        { value: '8+', label: 'Anos de experiência' },
+        { value: '4+', label: 'Projetos entregues' },
+        { value: '6+', label: 'Tecnologias dominadas' },
+      ],
+    },
+    stack: {
+      title: 'Meu Arsenal',
+      subtitle: 'Tecnologias que uso para construir soluções completas',
+      orbit: 'Explore o universo das minhas tecnologias',
+    },
+    projects: {
+      title: 'Projetos Recentes',
+      subtitle: 'Alguns dos trabalhos que mais me orgulho',
+      visit: 'Visitar Site',
+      mock: 'Mock',
+      inDev: 'Em Desenvolvimento',
+    },
+    contact: {
+      title: 'Vamos Conversar',
+      subtitle: 'Tem um projeto em mente? Me conta!',
+      firstName: 'Nome',
+      lastName: 'Sobrenome',
+      phone: 'Telefone',
+      email: 'E-mail',
+      message: 'Mensagem',
+      messagePlaceholder: 'Descreva seu projeto (máx. 500 caracteres)…',
+      submit: 'Enviar Mensagem',
+      sending: 'Enviando…',
+      successMsg: 'Mensagem enviada com sucesso!',
+      errorMsg: 'Erro ao enviar mensagem. Tente novamente.',
+      captchaMsg: 'Confirme o captcha antes de enviar.',
+      unexpectedError: 'Erro inesperado. Verifique sua conexão.',
+    },
+    footer: {
+      rights: 'Todos os direitos reservados.',
+      madeWith: 'Feito com',
+      by: 'por Rhaniery Mueller',
+    },
+  },
+  en: {
+    nav: {
+      home: 'Home',
+      about: 'About',
+      stack: 'Stack',
+      projects: 'Projects',
+      contact: 'Contact',
+      meeting: 'Schedule Meeting',
+    },
+    hero: {
+      greeting: "Hi, I'm",
+      name: 'Rhaniery Mueller',
+      roles: [
+        'Full Stack Developer',
+        2000,
+        'React Specialist',
+        2000,
+        'Builder of Ideas',
+        2000,
+        'Mobile Developer',
+        2000,
+      ],
+      cta1: 'See Projects',
+      cta2: "Let's Talk",
+      scroll: 'Scroll to explore',
+    },
+    about: {
+      title: 'About Me',
+      description:
+        "I'm Rhaniery Mueller, a full stack developer passionate about creating digital experiences that leave a mark. I transform ideas into functional and visually unique solutions, from robust backends to dynamic frontends.",
+      description2:
+        'With a focus on quality and performance, I work with modern technologies to deliver products that truly make a difference.',
+      stats: [
+        { value: '8+', label: 'Years of experience' },
+        { value: '4+', label: 'Projects delivered' },
+        { value: '6+', label: 'Technologies mastered' },
+      ],
+    },
+    stack: {
+      title: 'My Arsenal',
+      subtitle: 'Technologies I use to build complete solutions',
+      orbit: 'Explore my technology universe',
+    },
+    projects: {
+      title: 'Recent Projects',
+      subtitle: 'Some of the work I am most proud of',
+      visit: 'Visit Site',
+      mock: 'Mock',
+      inDev: 'In Development',
+    },
+    contact: {
+      title: "Let's Talk",
+      subtitle: 'Have a project in mind? Tell me about it!',
+      firstName: 'First Name',
+      lastName: 'Last Name',
+      phone: 'Phone',
+      email: 'Email',
+      message: 'Message',
+      messagePlaceholder: 'Describe your project (max. 500 characters)…',
+      submit: 'Send Message',
+      sending: 'Sending…',
+      successMsg: 'Message sent successfully!',
+      errorMsg: 'Error sending message. Please try again.',
+      captchaMsg: 'Please confirm the captcha before sending.',
+      unexpectedError: 'Unexpected error. Check your connection.',
+    },
+    footer: {
+      rights: 'All rights reserved.',
+      madeWith: 'Made with',
+      by: 'by Rhaniery Mueller',
+    },
+  },
+};
+
+export type Translations = typeof t.pt;

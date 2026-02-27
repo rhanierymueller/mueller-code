@@ -2,25 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto; /* Lenis handles smooth scroll */
+  cursor: none; /* Custom cursor on desktop */
+}
+
+@media (hover: none) {
+  html {
+    cursor: auto;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #070710;
+  color: #f8fafc;
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #070710;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 212, 255, 0.3);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 212, 255, 0.5);
+}
+
+/* Custom cursor states */
+.cursor-dot.cursor-hover {
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  transform: translate(-4px, -4px) !important;
+}
+
+.cursor-ring.cursor-hover {
+  width: 48px;
+  height: 48px;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 212, 255, 0.25);
+  color: #ffffff;
+}
+
+/* Remove o outline padrão do browser ao clicar (via mouse/touch) */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Mantém outline apenas para navegação por teclado (acessibilidade) */
+:focus-visible {
+  outline: 2px solid rgba(0, 212, 255, 0.6);
+  outline-offset: 2px;
+}
+
+/* Garante que botões nunca mostrem o ring circular do browser ao clicar */
+button:focus,
+a:focus {
+  outline: none;
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.7), 0 0 60px rgba(0, 212, 255, 0.3);
+  }
+}
+
+.glow-pulse {
+  animation: pulse-glow 3s ease-in-out infinite;
 }
 
 @layer utilities {
   @keyframes blob {
-    0%,
-    100% {
-      transform: translate(0, 0) scale(1);
-    }
-    20% {
-      transform: translate(35%, -20%) scale(1.2);
-    }
-    50% {
-      transform: translate(-25%, 40%) scale(0.8);
-    }
-    80% {
-      transform: translate(-40%, -25%) scale(1.25);
-    }
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    20% { transform: translate(35%, -20%) scale(1.2); }
+    50% { transform: translate(-25%, 40%) scale(0.8); }
+    80% { transform: translate(-40%, -25%) scale(1.25); }
   }
 
   .animate-blob {
