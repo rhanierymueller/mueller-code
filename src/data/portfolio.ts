@@ -1,6 +1,7 @@
 import avyliaImg from '../assets/image/avylia.png';
 import versoguard from '../assets/image/versoguard.png';
 import trocaFacil from '../assets/image/trocafacil.png';
+import equobraImg from '../assets/image/equobra.png';
 
 const DEVICON = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons';
 
@@ -57,6 +58,19 @@ export const techStacks = [
 
 export const projects = [
   {
+    id: 'equobra',
+    title: 'EquaObra',
+    description: {
+      pt: 'Plataforma completa para montagem de equipes de obra. Busca de profissionais por localidade, chat interno, avaliações e gestão de equipes. App mobile + Web + API.',
+      en: 'Full platform for assembling construction teams. Search professionals by location, in-app chat, ratings, and team management. Mobile app + Web + API.',
+    },
+    image: equobraImg,
+    site: 'https://equaobra.vercel.app/home',
+    github: 'https://github.com/rhanierymueller/equaobra',
+    tech: ['Next.js', 'React Native', 'Node.js', 'Prisma', 'PostgreSQL', 'TailwindCSS'],
+    mock: false,
+  },
+  {
     id: 'avylia',
     title: 'Avylia AI',
     description: {
@@ -65,6 +79,7 @@ export const projects = [
     },
     image: avyliaImg,
     site: 'https://www.avylia.com/',
+    github: 'https://github.com/rhanierymueller/serena-ai',
     tech: ['React', 'Node.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'TailwindCSS'],
     mock: false,
   },
@@ -76,7 +91,8 @@ export const projects = [
       en: 'Platform for exchanging products and services between users. Peer-to-peer marketplace with rating system.',
     },
     image: trocaFacil,
-    site: null,
+    site: '#',
+    github: 'https://github.com/rhanierymueller/troca-facil',
     tech: ['React', 'Node.js', 'TailwindCSS', 'PostgreSQL'],
     mock: false,
   },
@@ -89,7 +105,8 @@ export const projects = [
     },
     image: versoguard,
     site: 'https://versoguard.com',
+    github: 'https://github.com/rhanierymueller/Verso-Guard',
     tech: ['Python', 'AWS', ' React-Native'],
-    mock: true,
+    mock: false,
   },
 ];

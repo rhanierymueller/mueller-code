@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import { useLang } from '../../context/LanguageContext';
 import { t } from '../../data/translations';
 import { projects } from '../../data/portfolio';
@@ -105,25 +105,6 @@ export default function Projects() {
                   )}
                 </div>
 
-                {/* Visit button on hover */}
-                {project.site && project.site !== '#' && (
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <a
-                      href={project.site}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-transform hover:scale-105"
-                      style={{
-                        background: 'linear-gradient(135deg, #00d4ff, #0ea5e9)',
-                        color: '#000',
-                        boxShadow: '0 0 20px rgba(0,212,255,0.4)',
-                      }}
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      {tx.visit}
-                    </a>
-                  </div>
-                )}
               </div>
 
               {/* Content */}
@@ -134,7 +115,7 @@ export default function Projects() {
                 </p>
 
                 {/* Tech tags */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-5">
                   {project.tech.map(tech => (
                     <span
                       key={tech}
@@ -148,6 +129,65 @@ export default function Projects() {
                       {tech}
                     </span>
                   ))}
+                </div>
+
+                {/* Action buttons */}
+                <div className="flex gap-3">
+                  {project.site && project.site !== '#' ? (
+                    <a
+                      href={project.site}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-105 cursor-pointer"
+                      style={{
+                        background: 'linear-gradient(135deg, #00d4ff, #0ea5e9)',
+                        color: '#000',
+                        boxShadow: '0 0 15px rgba(0,212,255,0.3)',
+                      }}
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      {tx.access}
+                    </a>
+                  ) : (
+                    <span
+                      className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold opacity-40 cursor-not-allowed"
+                      style={{
+                        background: 'linear-gradient(135deg, #00d4ff, #0ea5e9)',
+                        color: '#000',
+                      }}
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      {tx.access}
+                    </span>
+                  )}
+                  {project.github && project.github !== '#' ? (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-105 cursor-pointer"
+                      style={{
+                        background: 'rgba(255,255,255,0.08)',
+                        border: '1px solid rgba(255,255,255,0.15)',
+                        color: '#e2e8f0',
+                      }}
+                    >
+                      <Github className="w-4 h-4" />
+                      {tx.github}
+                    </a>
+                  ) : (
+                    <span
+                      className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold opacity-40 cursor-not-allowed"
+                      style={{
+                        background: 'rgba(255,255,255,0.08)',
+                        border: '1px solid rgba(255,255,255,0.15)',
+                        color: '#e2e8f0',
+                      }}
+                    >
+                      <Github className="w-4 h-4" />
+                      {tx.github}
+                    </span>
+                  )}
                 </div>
               </div>
             </motion.div>
